@@ -21,7 +21,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   document.querySelector("#btnLearn").addEventListener("click", (event) => {
-    location.href = "https://frontendmasters.com";
+    location.href = "https://github.com/adesh02092000";
+  });
+
+  document.querySelector("#btnShare").addEventListener("click", (e) => {
+    let noteString = "";
+    for (let note of notes) {
+      noteString += note + " | ";
+    }
+    navigator.share({
+      title: "Codepad",
+      text: noteString,
+    });
   });
 });
 
