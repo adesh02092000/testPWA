@@ -14,5 +14,9 @@ this.addEventListener("install", (event) => {
   });
 });
 
-// Service workers has a local cache, which is use to store some or all of the resources
-// You can prefetch these resources in the cache or just like web apps cache them on request
+// Serving with the service worker, not each URL is rendering this same response, even the HTML is not
+// rendered. To bypass this use shift + refresh
+this.addEventListener("fetch", (event) => {
+  const response = new Response("Hello I'm a response");
+  event.respondWith(response);
+});
