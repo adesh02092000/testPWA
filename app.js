@@ -1,4 +1,4 @@
-const notes = [];
+let notes = [];
 const LOCAL_STORAGE_KEY = "Codepad-notes";
 // Registering all the event handlers when the page loads
 document.addEventListener("DOMContentLoaded", (event) => {
