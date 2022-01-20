@@ -22,5 +22,13 @@
       "type": "image/png",
       "purpose": "maskable"
     }
+  ],
+  "description": "This app let's you take notes, while coding",
+  "screenshots": [
+    {
+      "src": "icons/screenshot.png",
+      "sizes": "1170x2532",
+      "type": "image/png"
+    }
   ]
 }
