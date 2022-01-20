@@ -34,6 +34,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
       text: noteString,
     });
   });
+
+  let beforeInstallPromptEvent = null;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault(); // prevent the annoying default dialog box for install
+    beforeInstallPromptEvent = e;
+  });
+
+  document.querySelector("#btnInstall").addEventListener("click", (e) => {});
+  if (beforeInstallPromptEvent) {
+    beforeInstallPromptEvent.prompt();
+  } else {
+    // incompatible browser or the PWA is not passing some criteria, or the user has already installed the PWA.
+    alert(
+      "To install the app look for Add to Homecreen or Install option in your browser's menu"
+    );
+  }
 });
 
 // Render the notes on the DOM

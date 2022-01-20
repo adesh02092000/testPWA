@@ -117,3 +117,9 @@ body > #toolbar {
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
 }
+
+@media (display-mode: standalone), (display-mode: minimal-ui) {
+  #itemInstall {
+    display: none;
+  }
+}
