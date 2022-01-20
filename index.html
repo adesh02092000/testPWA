@@ -3,8 +3,15 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <title>Store notes and learning goals while you are coding</title>
+    <!-- Only one manifest per HTML file is allowed -->
+    <!-- manifest files are just json files, we can also name it (manifest.json) -->
+    <!-- Always store the manifest file on the root of the project -->
+    <link rel="manifest" href="./app.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js"></script>
+    <!-- Have added this theme color in manifest file but, we can also add it here, and change it using JS,
+        Based on requirements -->
+    <meta name="theme-color" content="##ffde59" />
   </head>
 
   <body>
