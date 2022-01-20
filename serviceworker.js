@@ -15,6 +15,7 @@ this.addEventListener("install", (event) => {
   );
 });
 
+// Now since we have our assets served from the service worker the app also works offline
 this.addEventListener("fetch", (event) => {
   event.respondWith(
     caches
